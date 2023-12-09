@@ -1,0 +1,26 @@
+<div>
+    <h1>Citas Médicas</h1>
+
+    <button class="btn" routerLink="/medical-appointment">Agendar una cita médica</button>
+
+    <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>DNI</th>
+            <th>Especialidad</th>
+            <th>Fecha</th>
+            <th>Hospital</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let medicalAppointment of medicalAppointments">
+            <td> {{ medicalAppointment.id }} </td>
+            <td> {{ medicalAppointment.dni }} </td>
+            <td> {{ medicalAppointment.medicalSpeciality.name }} </td>
+            <td> {{ medicalAppointment.date }} </td>
+            <td> {{ medicalAppointment.hospital.name }} </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

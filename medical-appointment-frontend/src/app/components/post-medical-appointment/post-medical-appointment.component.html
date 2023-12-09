@@ -1,0 +1,22 @@
+<div class="form-container">
+  <h1>Registrar cita médica</h1>
+  <form [formGroup]="postMedicalAppointmentForm">
+    <label for="date">Fecha:</label>
+    <input type="date" id="date" name="date" required formControlName="date">
+
+    <label for="hospital">Hospital:</label>
+    <select id="hospital" name="hospital" required formControlName="hospital">
+      <option *ngFor="let hospital of hospitals" [ngValue]="{ id: hospital.id, name: hospital.name }">{{ hospital.name }}</option>
+    </select>
+
+    <label for="dni">DNI:</label>
+    <input type="number" id="dni" name="dni" required formControlName="dni">
+
+    <label for="medicalSpeciality">Especialidad Médica:</label>
+    <select id="medicalSpeciality" name="medicalSpeciality" required formControlName="medicalSpeciality">
+      <option *ngFor="let speciality of medicalSpecialties" [ngValue]="{ id: speciality.id, name: speciality.name }">{{ speciality.name }}</option>
+    </select>
+
+    <button type="submit" (click)="postMedicalAppointment()">Registrar cita</button>
+  </form>
+</div>
