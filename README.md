@@ -7,11 +7,10 @@
 
 ## Ejecutar el proyecto
 - **Backend**: mvn spring-boot:run
-- **Frontend**: ng serve
+- **Frontend**: npm install && ng serve
 
 ## Extras
 - **Backend**: Cambiar las credenciales de la base de datos en el archivo application.properties
-*Default* 
 ```
 username: root
 password: root
